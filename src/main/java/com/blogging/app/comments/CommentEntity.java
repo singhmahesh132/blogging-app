@@ -11,10 +11,12 @@ import org.springframework.lang.Nullable;
 import java.util.Date;
 
 @Entity(name = "comments")
+@Builder
 @Getter
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class CommentEntity {
 
     @Id

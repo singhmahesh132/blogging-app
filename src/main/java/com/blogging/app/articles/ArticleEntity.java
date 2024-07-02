@@ -10,10 +10,12 @@ import org.springframework.lang.Nullable;
 import java.util.Date;
 
 @Entity(name = "articles")
+@Builder
 @Getter
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class ArticleEntity {
 
     @Id

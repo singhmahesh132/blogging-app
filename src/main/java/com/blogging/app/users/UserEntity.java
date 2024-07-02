@@ -7,10 +7,12 @@ import org.springframework.lang.Nullable;
 import org.springframework.lang.NonNull;
 
 @Entity(name = "users")
+@Builder
 @Getter
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@AllArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
