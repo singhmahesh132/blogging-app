@@ -1,0 +1,33 @@
+package com.blogging.app.users;
+
+
+import jakarta.persistence.*;
+import lombok.*;
+import org.springframework.lang.Nullable;
+import org.springframework.lang.NonNull;
+
+@Entity(name = "users")
+@Getter
+@ToString
+@RequiredArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class UserEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(nullable = false)
+    private Long id;
+
+    @NonNull
+    private String username;
+
+    @NonNull
+    private String email;
+
+    @Nullable
+    private String bio;
+
+    @Nullable
+    private  String image;
+
+
+}
