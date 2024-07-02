@@ -3,8 +3,8 @@ package com.blogging.app.comments;
 import com.blogging.app.articles.ArticleEntity;
 import com.blogging.app.articles.ArticlesRepository;
 import com.blogging.app.users.UserEntity;
-import com.blogging.app.users.UserRepositoryTests;
 import com.blogging.app.users.UsersRepository;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class CommentsRepositoryTest {
 
         var article = ArticleEntity.builder()
                 .title("mahesh")
-                .slug("i dont know")
+                .slug("i don't know")
                 .body("my book")
                 .author(author)
                 .build();
@@ -47,8 +47,16 @@ public class CommentsRepositoryTest {
                 .article(article)
                 .author(author)
                 .build();
-
         commentsRepository.save(comment);
+    }
+
+    @Test
+    @Order(2)
+    void can_find_user(){
+        can_create_comments();
+        var comment = commentsRepository.findAll();
+
+        Assertions.assertEquals(1,comment.size());
     }
 
 }

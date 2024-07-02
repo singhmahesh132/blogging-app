@@ -21,7 +21,7 @@ public class CommentEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @NonNull
+    @Column(nullable = false)
     private Long id;
 
     @Nullable

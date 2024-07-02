@@ -20,7 +20,7 @@ public class ArticleEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @NonNull
+    @Column(nullable = false)
     private Long id;
 
     @NonNull

@@ -1,4 +1,4 @@
-package com.blogging.app;
+package com.blogging.app.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
