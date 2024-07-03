@@ -1,7 +1,9 @@
 package com.blogging.app.articles;
 
-import com.blogging.app.users.UserEntity;
-import com.blogging.app.users.UsersRepository;
+import com.blogging.app.entities.ArticleEntity;
+import com.blogging.app.entities.UserEntity;
+import com.blogging.app.repos.ArticlesRepository;
+import com.blogging.app.repos.UsersRepository;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,9 +1,11 @@
 package com.blogging.app.comments;
 
-import com.blogging.app.articles.ArticleEntity;
-import com.blogging.app.articles.ArticlesRepository;
-import com.blogging.app.users.UserEntity;
-import com.blogging.app.users.UsersRepository;
+import com.blogging.app.entities.ArticleEntity;
+import com.blogging.app.repos.ArticlesRepository;
+import com.blogging.app.entities.CommentEntity;
+import com.blogging.app.entities.UserEntity;
+import com.blogging.app.repos.CommentsRepository;
+import com.blogging.app.repos.UsersRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

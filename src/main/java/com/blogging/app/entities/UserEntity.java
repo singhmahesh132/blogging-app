@@ -1,4 +1,4 @@
-package com.blogging.app.users;
+package com.blogging.app.entities;
 
 
 import jakarta.persistence.*;

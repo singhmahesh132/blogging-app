@@ -1,5 +1,6 @@
-package com.blogging.app.comments;
+package com.blogging.app.repos;
 
+import com.blogging.app.entities.CommentEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

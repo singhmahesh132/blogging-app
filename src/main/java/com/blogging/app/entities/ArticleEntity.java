@@ -1,6 +1,5 @@
-package com.blogging.app.articles;
+package com.blogging.app.entities;
 
-import com.blogging.app.users.UserEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;

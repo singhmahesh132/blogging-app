@@ -1,5 +1,7 @@
 package com.blogging.app.users;
 
+import com.blogging.app.entities.UserEntity;
+import com.blogging.app.repos.UsersRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
