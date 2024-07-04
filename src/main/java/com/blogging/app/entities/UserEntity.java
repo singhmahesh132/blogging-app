@@ -21,6 +21,9 @@ public class UserEntity {
     private Long id;
 
     @NonNull
+    private String password;
+
+    @NonNull
     private String username;
 
     @NonNull
