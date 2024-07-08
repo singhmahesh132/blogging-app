@@ -22,6 +22,7 @@ public class UserRepositoryTests {
         var user = UserEntity.builder()
                 .username("mahesh")
                 .email("singhm@gmail.com")
+                .password("abc")
                 .build();
 
         usersRepository.save(user);
@@ -36,6 +37,7 @@ public class UserRepositoryTests {
         var user = UserEntity.builder()
                 .username("mahesh")
                 .email("singhm@gmail.com")
+                .password("abc")
                 .build();
         usersRepository.save(user);
         var users = usersRepository.findAll();

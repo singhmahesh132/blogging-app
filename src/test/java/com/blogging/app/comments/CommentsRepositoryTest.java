@@ -32,6 +32,7 @@ public class CommentsRepositoryTest {
         var author = UserEntity.builder()
                 .username("mahesh")
                 .email("singhm@gmail.com")
+                .password("abc")
                 .build();
         usersRepository.save(author);
 

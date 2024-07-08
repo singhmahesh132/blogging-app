@@ -26,6 +26,7 @@ public class ArticlesRepositoryTest {
         var author = UserEntity.builder()
                 .username("mahesh")
                 .email("singh.130@gmail.com")
+                .password("abcd")
                 .build();
 
         usersRepository.save(author);
