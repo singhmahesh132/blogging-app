@@ -9,6 +9,7 @@ import org.springframework.lang.NonNull;
 @Entity(name = "users")
 @Builder
 @Getter
+@Setter
 @ToString
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
