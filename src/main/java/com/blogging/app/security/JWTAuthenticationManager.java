@@ -1,19 +1,18 @@
 package com.blogging.app.security;
 
 import com.blogging.app.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.context.SecurityContextHolder;
 
 public class JWTAuthenticationManager implements AuthenticationManager {
+    private final JWTService jwtService;
+    private final UserService userService;
 
-    @Autowired
-    JWTService jwtService;
-
-    @Autowired
-    UserService userService;
+    public  JWTAuthenticationManager(JWTService jwtService, UserService userService){
+        this.jwtService = jwtService;
+        this.userService = userService;
+    }
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
@@ -24,11 +23,7 @@ public class JWTAuthenticationManager implements AuthenticationManager {
             var userId = jwtService.getSubjectUserId(jwt);
 
             jwtAuthentication.userEntity = userService.getById(userId);
-
-            if(jwtAuthentication.userEntity.getId() == userId){
-                SecurityContextHolder.getContext().setAuthentication(jwtAuthentication);
-                jwtAuthentication.setAuthenticated(true);
-            }
+            jwtAuthentication.setAuthenticated(true);
 
             return jwtAuthentication;
         }

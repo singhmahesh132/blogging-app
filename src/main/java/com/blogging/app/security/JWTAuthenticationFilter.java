@@ -20,8 +20,8 @@ AuthenticationFilter() -> AuthenticationConverter() -> AuthenticationManager() -
 */
 public class JWTAuthenticationFilter extends AuthenticationFilter {
 
-    public JWTAuthenticationFilter() {
-        super(new JWTAuthenticationManager(), new JWTAuthenticationConverter());
+    public JWTAuthenticationFilter(JWTAuthenticationManager jwtAuthenticationManager) {
+        super(jwtAuthenticationManager, new JWTAuthenticationConverter());
 
         this.setSuccessHandler(((request, response, authentication) ->
                 SecurityContextHolder.getContext().setAuthentication(authentication)));
