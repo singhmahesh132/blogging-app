@@ -12,17 +12,18 @@ public class MyMapper {
     public static UserDto userToDto(UserEntity user){
         return UserDto.builder()
                 .id(user.getId())
-                .username(user.getUsername())
                 .email(user.getEmail())
+                .username(user.getUsername())
                 .bio(user.getBio())
                 .image(user.getImage())
+                .password(null)
                 .build();
     }
 
     public static UserEntity dtoToUser(UserDto userDto){
         return UserEntity.builder()
                 .username(userDto.getUsername())
-                .password((userDto.getPassword()))
+                .password(userDto.getPassword())
                 .email(userDto.getEmail())
                 .bio(userDto.getBio())
                 .image(userDto.getImage())
