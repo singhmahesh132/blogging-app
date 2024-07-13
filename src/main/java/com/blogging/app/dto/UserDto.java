@@ -17,7 +17,7 @@ public class UserDto {
     @Nullable
     private String password;
 
-    @NonNull
+    @Nullable
     private String email;
 
     @Nullable
