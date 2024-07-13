@@ -6,6 +6,7 @@ import org.springframework.lang.NonNull;
 
 @Builder
 @Getter
+@Setter
 public class UserDto {
 
     @Nullable
@@ -25,4 +26,6 @@ public class UserDto {
 
     @Nullable
     private String image;
+
+    private String loginToken;
 }

@@ -20,6 +20,7 @@ public class WebSecurityConfig {
                 requestMatchers(HttpMethod.GET,"/*").permitAll().
                 requestMatchers(HttpMethod.POST,"/users/create","users/login").permitAll().
                 requestMatchers("/h2-console/*").permitAll().
+                requestMatchers(HttpMethod.GET,"/articles/*").permitAll().
                 anyRequest().authenticated());
         return http.build();
     }

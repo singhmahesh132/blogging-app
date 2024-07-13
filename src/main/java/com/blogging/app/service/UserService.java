@@ -24,6 +24,10 @@ public class UserService {
         return MyMapper.userToDto(user);
     }
 
+    public UserEntity getById(Long id){
+        return usersRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+    }
+
     public UserDto getLoggedInUser(String username, String password){
         UserEntity user = usersRepository.findByUsername(username).orElseThrow(() -> new UserNotFoundException(username));
         if(!passwordEncoder.matches(password,user.getPassword()))
